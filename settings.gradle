@@ -1,0 +1,22 @@
+rootProject.name = "cosmicos"
+
+include ':test'
+
+//For demo app.
+
+// aosp
+include ':framework'
+include ':services'
+include ':framework-res'
+
+//SystemUI
+include ':SystemUI'
+include ':SystemUIPluginLib'
+
+//Settings
+include ':Settings'
+include ':SettingsLib'
+
+include ':SettingsProvider'
+
+

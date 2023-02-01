@@ -1,0 +1,30 @@
+ext {
+    BUILD_APPLICATION = false
+    BUILD_MANIFEST = rootProject.ext.SettingsManifestDir
+    BUILD_RES = rootProject.ext.SettingsResDir
+    BUILD_ASSETS = 'assets'
+    BUILD_SRC = rootProject.ext.SettingsDir
+    BUILD_AIDL = rootProject.ext.SettingsDir
+}
+
+apply from: "${rootDir}/scripts/android-build.gradle"
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    if (rootProject.ext.enable_boot_jar.toBoolean()) {
+        compileOnly fileTree(include: ['*.jar'], dir: '../system_libs')
+    }
+
+    // Java language implementation
+    implementation "androidx.preference:preference:1.2.0"
+    api project(":SettingsLib")
+    implementation "androidx.appcompat:appcompat:1.2.0"
+    implementation "androidx.window:window:1.0.0"
+    implementation "androidx.window:window-java:1.0.0"
+
+
+
+    rootProject.ext.allModules.each { dependence -> compileOnly project(dependence.value) }
+
+}
+
