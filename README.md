@@ -1,8 +1,8 @@
 # Easy AOSP
 
 ## Introduction
-This project aims to quickly import AOSP framework(java part) and it's faster and more efficient.
-Internally, it imports resources & java per aosp modules and adds the modules at bootpath . I recommend using intellij-remote development for better result.
+This project aims to quickly import AOSP framework(java part) with android-studio/intellij and it's faster and more efficient.
+Internally, it imports resources & java per aosp modules and adds the modules at bootpath . I recommend using intellij-remote development for best result.
 
 
 
