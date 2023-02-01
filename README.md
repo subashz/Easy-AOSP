@@ -1,8 +1,9 @@
 # Easy AOSP
 
 ## Introduction
-This project aims to quickly import AOSP framework(java part) and it's faster and more efficient than other solutions like aidegen or idegen.
-Internally, it imports resources & java per aosp modules and bootstrap the process. I recommend using intellij-remote development for better result.
+This project aims to quickly import AOSP framework(java part) and it's faster and more efficient.
+Internally, it imports resources & java per aosp modules and adds the modules at bootpath . I recommend using intellij-remote development for better result.
+
 
 
 ## Configuration introduction
@@ -35,7 +36,7 @@ Even though, this will have circular dependency and the real app gradle project 
 This function cannot compile framework.jar or services.jar, please use the compilation method recommended by aosp.
 To compile the demo app for debugging, you can check the settings.gradle comments, annotate some modules according to the prompts; and set enable_boot_jar and build_app to true in config.gradle.
 
-If necessary, copy framework.jar and services.jar to system_libs
+If necessary, copy framework.jar and services.jar to system_libs.
 
 ```bash
 cp out/target/common/obj/JAVA_LIBRARIES/framework-minus-apex_intermediates/classes.jar ../system_libs/framework-minus-apex.jar
@@ -63,3 +64,5 @@ cp out/target/common/obj/JAVA_LIBRARIES/services_intermediates/classes.jar ../sy
 ## Cons
 1. Only for java & resources for now
 2. 
+
+Based on [this](https://github.com/journeyOS/).
