@@ -1,4 +1,4 @@
-# as aosp
+# Easy AOSP
 
 ## Introduction
 This project aims to quickly import AOSP framework(java part) and it's faster and more efficient than other solutions like aidegen or idegen.
