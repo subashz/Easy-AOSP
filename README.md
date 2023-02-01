@@ -44,12 +44,13 @@ cp out/target/common/obj/JAVA_LIBRARIES/services_intermediates/classes.jar ../sy
 ```
 
 ## How to install & run
+0. Download & setup the aosp source code and make the project [Link](https://source.android.com/docs/setup/build/building)
 1. Install intellij ultimate edition (you can get a free version using student account.) (OPTIONAL)
 2. Clone this repo on your local/remote server
 3. Use the remote-development feature of intellij ultimate
 4. Use ssh connection and browse this cloned project
 5. Change the aosp directory in scripts/aosp.gradle.
-5. Make sure you have 'Android' selected in project preview. 
+5. Make sure you have 'Android' selected in project preview to view the source file/resources.
 5. Get code completion and drawable preview.
 6. Enjoy browsing..
 
